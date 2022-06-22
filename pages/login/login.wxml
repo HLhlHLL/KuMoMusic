@@ -29,4 +29,10 @@
 
     <button class="submitBtn" form-type="submit">登录</button>
   </form>
+
+  <!-- 游客登录 -->
+  <view
+    class="skip"
+    bindtap="handleToIndex"
+  >跳过</view>
 </view>

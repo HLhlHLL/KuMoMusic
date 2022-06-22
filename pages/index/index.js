@@ -88,10 +88,26 @@ Page({
 
   // 跳转到导航页面
   handleOpenNav(e) {
-    const url = e.currentTarget.dataset.page
-    wx.navigateTo({
-      url
-    })
+    const userinfo = wx.getStorageSync('userinfo')
+    const user = JSON.parse(userinfo || null)
+    if(user) {
+      const url = e.currentTarget.dataset.page
+      wx.navigateTo({
+        url
+      })
+    } else {
+      wx.showToast({
+        title: '请先登录',
+        icon: 'error',
+        success: () => {
+          setTimeout(() => {
+            wx.navigateTo({
+              url: '/pages/login/login',
+            })
+          }, 2000);
+        }
+      })
+    }
   },
 
   // 打开更多歌单

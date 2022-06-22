@@ -54,7 +54,10 @@
   </view>
 
   <!-- 我喜欢的音乐 -->
-  <view class="favorite">
+  <view
+    class="favorite"
+    wx:if="{{ userinfo.nickname }}"
+  >
     <PlayList
       icon="{{ 'icon-heartbeat' }}"
       btnText="{{ '心动模式' }}"
@@ -93,6 +96,10 @@
 
   <!-- 退出登录 -->
   <view class="logout">
-    <button class="logout-btn">退出登录</button>
+    <button
+      class="logout-btn"
+      wx:if="{{ userinfo.nickname }}"
+      bindtap="handleLogout"
+    >退出登录</button>
   </view>
 </view>

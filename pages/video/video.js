@@ -19,7 +19,28 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    this.getNavList()
+    this.isUserLogged()
+  },
+
+  // 判断用户是否登录
+  isUserLogged() {
+    const userinfo = wx.getStorageSync('userinfo')
+    const user = JSON.parse(userinfo || null)
+    if(user) {
+      this.getNavList()
+    } else {
+      wx.showToast({
+        title: '请先登录',
+        icon: 'error',
+        success: () => {
+          setTimeout(() => {
+            wx.navigateTo({
+              url: '/pages/login/login',
+            })
+          }, 2000);
+        }
+      })
+    }
   },
 
   // 获取导航列表
@@ -137,7 +158,7 @@ Page({
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
-
+    this.isUserLogged()
   },
 
   /**

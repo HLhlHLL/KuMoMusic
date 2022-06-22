@@ -87,6 +87,16 @@ Page({
     }
   },
 
+  // 退出登录
+  handleLogout() {
+    wx.removeStorageSync('userinfo')
+    wx.removeStorageSync('token')
+    wx.removeStorageSync('cookie')
+    wx.navigateTo({
+      url: '/pages/login/login',
+    })
+  },
+
   /**
    * 生命周期函数--监听页面初次渲染完成
    */
