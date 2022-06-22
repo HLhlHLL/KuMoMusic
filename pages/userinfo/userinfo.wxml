@@ -1,0 +1,98 @@
+<view class="container">
+  <!-- 用户信息 -->
+  <view class="userinfo-wrap">
+    <view class="inner">
+      <view class="avatar">
+        <image
+          wx:if="{{ userinfo.avatarUrl }}"
+          src="{{ userinfo.avatarUrl }}"
+        ></image>
+        <view
+          wx:else
+          class="iconfont icon-user"
+        ></view>
+      </view>
+      <!-- 已登录 -->
+      <view
+        class="loggedin"
+        wx:if="{{ userinfo.nickname }}"
+      >
+        <view class="user-vip">
+          <view class="username">{{ userinfo.nickname }}</view>
+          <view class="vip">
+            <text>vip续费</text>
+            <text class="iconfont icon-right"></text>
+          </view>
+        </view>
+        <view class="follow-fans-level">
+          <view class="follow">{{ userinfo.follows }}关注</view>
+          <view class="fans">{{ userinfo.followeds }}粉丝</view>
+          <view class="level">Lv.{{ userlevel.level }}</view>
+        </view>
+      </view>
+      <!-- 未登录 -->
+      <view
+        class="not-loggedin"
+        wx:else
+        bindtap="handleToLogin"
+      >
+        <view class="hint">
+          <text class="denglu">立即登录</text>
+          <text class="iconfont icon-right"></text>
+        </view>
+      </view>
+    </view>
+  </view>
+
+  <!-- 导航列表 -->
+  <view class="nav-list">
+    <view class="option">最近播放</view>
+    <view class="option">本地下载</view>
+    <view class="option">我的好友</view>
+    <view class="option">收藏</view>
+    <view class="option">广播电台</view>
+  </view>
+
+  <!-- 我喜欢的音乐 -->
+  <view class="favorite">
+    <PlayList
+      icon="{{ 'icon-heartbeat' }}"
+      btnText="{{ '心动模式' }}"
+      listItem="{{ favoritelist[0] }}"
+    ></PlayList>
+  </view>
+
+  <view class="top-wrap">
+    <!-- 歌单管理 -->
+    <view class="list-manage {{ fixed }}">
+      <view
+        class="create {{ curManageIndex === 0 ? 'active' : ''}}"
+        data-index="{{ 0 }}"
+        bindtap="handleToggleManage"
+      >创建歌单</view>
+      <view
+        class="collect {{ curManageIndex === 1 ? 'active' : ''}}"
+        data-index="{{ 1 }}"
+        bindtap="handleToggleManage"
+      >收藏歌单</view>
+    </view>
+
+    <!-- 创建歌单 -->
+    <PlayListManager
+      title="创建歌单"
+      list="{{ createlist }}"
+      plus="{{ true }}"
+    ></PlayListManager>
+  </view>
+
+  <!-- 收藏歌单 -->
+  <PlayListManager
+    title="收藏歌单"
+    list="{{ collectlist }}"
+  ></PlayListManager>
+
+  <!-- 退出登录 -->
+  <view class="logout">
+    <button class="logout-btn">退出登录</button>
+  </view>
+</view>

@@ -1,0 +1,102 @@
+.m-item {
+  display: flex;
+  align-items: center;
+  height: 100rpx;
+  margin: 10rpx 0;
+}
+
+.m-item .cover {
+  position: relative;
+  width: 90rpx;
+  height: 90rpx;
+}
+
+.m-item .cover .iconfont {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #eee;
+  font-size: 60rpx;
+  opacity: .6;
+}
+
+.m-item .cover image {
+  width: 100%;
+  height: 100%;
+  border-radius: 20rpx;
+}
+
+.m-item .m-desc {
+  flex: 1;
+  height: 100rpx;
+  margin-left: 20rpx;
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid #eee;
+}
+
+.m-item .m-desc .music-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  width: 100%;
+}
+
+.m-item .m-desc .music-info .name-author {
+  width: 100%;
+  display: flex;
+}
+
+.m-item .m-desc .music-info .name-author .name {
+  max-width: 300rpx;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.m-item .m-desc .music-info .name-author .name .music-name-origin {
+  margin-right: 10rpx;
+  font-size: 32rpx;
+}
+
+.m-item .m-desc .music-info .name-author .authors {
+  max-width: 200rpx;
+  margin-left: 20rpx;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  color: #999;
+}
+
+.m-item .m-desc .music-info .name-author .authors .music-author {
+  padding-left: 10rpx;
+  font-size: 24rpx;
+  text-align: right;
+}
+
+.m-item .m-desc .music-info .music-reference {
+  max-width: 440rpx;
+  font-size: 24rpx;
+  color: #999;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.m-item .m-desc .options {
+  display: flex;
+  align-items: center;
+  margin-left: 10rpx;
+  color: #999;
+}
+
+.m-item .m-desc .options .play-mv,
+.m-item .m-desc .options .more {
+  margin: 0 4rpx;
+}
+
+.m-item .m-desc .options .play-mv .iconfont,
+.m-item .m-desc .options .more .iconfont {
+  font-size: 30rpx;
+}

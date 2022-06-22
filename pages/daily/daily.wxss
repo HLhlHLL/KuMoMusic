@@ -1,0 +1,54 @@
+.container {
+  position: relative;
+}
+
+.container .bg-img {
+  width: 100%;
+}
+
+.container .bg-img image {
+  width: 100%;
+}
+
+.container .music-list {
+  position: absolute;
+  top: 400rpx;
+  left: 0;
+  width: 100%;
+  padding: 100rpx 30rpx 0;
+  background-color: #fff;
+  box-sizing: border-box;
+  border-radius: 160% 160% 0 0 / 2% 2% 0 0;
+}
+
+.container .music-list .options {
+  display: flex;
+  position: absolute;
+  top: 20rpx;
+  left: 0;
+  width: 100%;
+  height: 100rpx;
+  padding-left: 30rpx;
+  align-items: center;
+  background-color: #fff;
+}
+
+.container .music-list .options.fixed {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding-left: 30rpx;
+  background-color: #fff;
+}
+
+.container .music-list .options .option-title,
+.container .music-list .options .iconfont {
+  line-height: 100rpx;
+}
+
+.container .music-list .options .icon-bofang {
+  margin: 0 10rpx;
+  font-size: 40rpx;
+  color: #e60026;
+}

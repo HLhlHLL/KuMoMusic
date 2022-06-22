@@ -1,0 +1,40 @@
+<view
+  class="song-list-container {{ !isHidden ? 'container-show' : '' }}"
+  bindtap="handleHiddeSongList"
+>
+  <swiper class="inner {{ !isHidden ? 'inner-show' : '' }}">
+    <swiper-item
+      catchtap="handlePrevent"
+      wx:for="{{ playList }}"
+      wx:for-item="songItem"
+      wx:for-index="index"
+      wx:key="index"
+    >
+      <view class="inner-item">
+        <view class="header">
+          <view class="title">{{ songItem.title }}</view>
+          <view class="count">({{ songItem.count }})</view>
+        </view>
+      <view class="options">
+        <view class="add-playlist">收藏</view>
+        <view class="delete-playlist">删除</view>
+      </view>
+      <scroll-view
+        class="play-list"
+        scroll-y
+      >
+        <SongItem
+          class="song-item"
+          wx:for="{{ songItem.songList }}"
+          wx:for-index="_index"
+          wx:key="id"
+          song="{{ item }}"
+          index="{{ _index }}"
+          bindhandleChangeSong="handleChangeSong"
+          bindhandleDeleteSong="handleDeleteSong"
+        ></SongItem>
+      </scroll-view>
+      </view>
+    </swiper-item>
+  </swiper>
+</view>

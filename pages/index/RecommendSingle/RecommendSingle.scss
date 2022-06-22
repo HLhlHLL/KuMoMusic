@@ -1,0 +1,30 @@
+// 单曲推荐
+.recommend-single {
+  height: 500rpx;
+  background-color: #fff;
+  margin-top: 20rpx;
+  padding: 0 30rpx;
+  border-radius: 20rpx;
+  
+  .option-btn {
+    height: 40rpx;
+    line-height: 40rpx;
+    border: 1px solid #999;
+    border-radius: 20rpx;
+    padding: 0 16rpx 0 6rpx;
+    
+    .btn-text {
+      vertical-align: top;
+      font-size: 28rpx;
+    }
+
+    .iconfont {
+      vertical-align: top;
+      font-size: 28rpx;
+    }
+  }
+
+  .m-list {
+    height: 360rpx;
+  }
+}

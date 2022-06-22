@@ -1,0 +1,63 @@
+<view class="container">
+  <!-- 模糊背景 -->
+  <image class="blur-bg" src="{{ songDetail.al.picUrl }}"></image>
+  <view class="header">
+    <view class="title">{{ songDetail.name }}</view>
+    <view class="author">{{ songDetail.artists }}</view>
+  </view>
+  <view class="play-bg">
+    <view class="rocker">
+      <image class="{{ playingStyle }}" mode="widthFix" src="/static/images/record/rocker.png"></image>
+    </view>
+    <view class="record">
+      <image class="record-bg" mode="widthFix" src="/static/images/record/record.png"></image>
+      <!-- 歌曲封面 -->
+      <image class="cover {{ playingStyle }} {{ stateStyle }}" mode="widthFix" src="{{ songDetail.al.picUrl }}"></image>
+    </view>
+  </view>
+  <!-- 进度条 -->
+  <view class="progress-wrap">
+    <view class="current-time">{{ currentTime }}</view>
+    <view
+      class="total-progress"
+      bindtouchstart="handleSeekMusic"
+      bindtouchmove="handleSeekMusic"
+      bindtouchend="handleSeekMusicEnd"
+    >
+      <view
+        class="current-progress"
+        style="width: {{progressWidth}};"
+      >
+        <view class="progress-btn"></view>
+      </view>
+    </view>
+    <view class="duration-time">{{ durationTime }}</view>
+  </view>
+  <!-- 控制按钮 -->
+  <view class="controller">
+    <view class="switch">切换</view>
+    <view
+      class="previous"
+      bindtap="handleSwitchPrevious"
+    >上一首</view>
+    <view
+      class="play"
+      bindtap="handlePlayMusic"
+    >播放</view>
+    <view
+      class="next"
+      bindtap="handleswitchNext"
+    >下一首</view>
+    <view
+      class="playlist"
+      bindtap="handleOpenSongList"
+    >播放列表</view>
+  </view>
+</view>
+
+<!-- 播放列表 -->
+<SongList
+  class="song-list"
+  isHidden="{{ hideSongList }}"
+  bindhandleHiddeSongList="handleHiddeSongList"
+></SongList>

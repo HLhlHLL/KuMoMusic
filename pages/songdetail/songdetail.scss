@@ -1,0 +1,180 @@
+.container {
+  height: 100%;
+  padding-top: 20rpx;
+  box-sizing: border-box;
+
+  // 模糊背景
+  .blur-bg {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    filter: blur(100px);
+    z-index: -1;
+  }
+
+  .header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 10rpx;
+
+    .title {
+      max-width: 650rpx;
+      font-size: 40rpx;
+      color: white;
+      margin-bottom: 10rpx;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
+
+    .author {
+      max-width: 650rpx;
+      font-size: 28rpx;
+      color: rgba($color: #f4f8ff, $alpha: .5);
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
+  }
+
+  // 播放状态图
+  .play-bg {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+
+    .rocker {
+      position: relative;
+      top: 0;
+      left: 125rpx;
+      z-index: 99;
+      
+      image {
+        width: 300rpx;
+        height: 300rpx;
+        transform-origin: 28rpx 38rpx;
+        transition: transform linear .3s;
+        
+        &.playing {
+          transform: rotate(27deg);
+        }
+      }
+    }
+
+    .record {
+      position: relative;
+      top: -40rpx;
+
+      &.record::after {
+        content: "";
+        position: absolute;
+        top: -18rpx;
+        left: -18rpx;
+        width: 105%;
+        height: 105%;
+        border-radius: 50%;
+        background-color: rgba($color: #b6b6b7, $alpha: .5);
+        z-index: -1;
+      }
+
+      .record-bg {
+        width: 560rpx;
+        height: 560rpx;
+      }
+
+      
+      .cover {
+        position: absolute;
+        top: 100rpx;
+        left: 100rpx;
+        width: 360rpx;
+        border-radius: 50%;
+        
+        &.playing {
+          animation: rotating 5s linear .5s infinite;
+        }
+
+        &.pause {
+          animation-play-state: paused;
+        }
+
+        &.run {
+          animation-play-state: running;
+        }
+      }
+
+      @keyframes rotating {
+        from {
+          transform: rotate(0);
+        }
+      
+        to {
+          transform: rotate(360deg);
+        }
+      }
+    }
+  }
+
+  // 进度条 
+  .progress-wrap {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    height: 80rpx;
+    line-height: 80rpx;
+    padding: 0 20rpx;
+    box-sizing: border-box;
+
+    .current-time,
+    .duration-time {
+      color: rgba($color: #000000, $alpha: .7);
+    }
+
+    .total-progress {
+      width: 480rpx;
+      height: 2px;
+      background-color: rgba($color: #000000, $alpha: .2);
+
+      .current-progress {
+        position: relative;
+        width: 0;
+        height: 2px;
+        background-color: #e60026;
+
+        .progress-btn {
+          position: absolute;
+          top: 50%;
+          right: 0;
+          transform: translateY(-50%);
+          width: 10rpx;
+          height: 10rpx;
+          border-radius: 50%;
+          background-color: #fff;
+        }
+      }
+    }
+  }
+
+  // 控制按钮
+  .controller {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 150rpx;
+    line-height: 150rpx;
+    display: flex;
+
+    .switch,
+    .previous,
+    .play,
+    .next,
+    .playlist {
+      flex: 1;
+      text-align: center;
+    }
+  }
+}

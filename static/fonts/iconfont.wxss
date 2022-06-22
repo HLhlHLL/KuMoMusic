@@ -1,0 +1,70 @@
+@font-face {
+  font-family: "iconfont"; /* Project id 3438760 */
+  src: url('//at.alicdn.com/t/font_3438760_02u2wbvec5i8.woff2?t=1654591529124') format('woff2'),
+       url('//at.alicdn.com/t/font_3438760_02u2wbvec5i8.woff?t=1654591529124') format('woff'),
+       url('//at.alicdn.com/t/font_3438760_02u2wbvec5i8.ttf?t=1654591529124') format('truetype');
+}
+
+.iconfont {
+  font-family: "iconfont" !important;
+  font-size: 16px;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-bofang:before {
+  content: "\e62c";
+}
+
+.icon-dianzan:before {
+  content: "\ec7f";
+}
+
+.icon-user:before {
+  content: "\e63e";
+}
+
+.icon-wangyiyunyinle:before {
+  content: "\e601";
+}
+
+.icon-plus:before {
+  content: "\e641";
+}
+
+.icon-heartbeat:before {
+  content: "\e80c";
+}
+
+.icon-more:before {
+  content: "\e607";
+}
+
+.icon-Play:before {
+  content: "\e72c";
+}
+
+.icon-bofanganniu:before {
+  content: "\e726";
+}
+
+.icon-right:before {
+  content: "\e6a3";
+}
+
+.icon-rili:before {
+  content: "\e600";
+}
+
+.icon-paihangbang:before {
+  content: "\e782";
+}
+
+.icon-diantai:before {
+  content: "\e636";
+}
+
+.icon-gedan:before {
+  content: "\e637";
+}

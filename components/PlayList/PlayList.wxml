@@ -1,0 +1,19 @@
+<view
+  class="play-list"
+  bindtap="handleOpenPlayList"
+>
+  <view class="cover">
+    <image src="{{ listItem.coverImgUrl }}"></image>
+  </view>
+  <view class="desc">
+    <view class="title">{{ listItem.name }}</view>
+    <view class="count">{{ listItem.trackCount }}首</view>
+  </view>
+  <view
+    class="model {{ btnText !== '' ? 'border' : '' }}"
+    catchtap="handleOpenPlayListDetail"
+  >
+    <text class="iconfont {{ icon }}"></text>
+    <text class="btn-text">{{ btnText }}</text>
+  </view>
+</view>

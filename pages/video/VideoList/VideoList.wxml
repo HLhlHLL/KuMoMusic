@@ -1,0 +1,37 @@
+<view class="container">
+  <scroll-view
+    class="scroll-video"
+    scroll-y
+    refresher-enabled
+    refresher-triggered="{{ isRefreshing }}"
+    bindrefresherrefresh="handleRefresherRefresh"
+    bindscrolltolower="handleScrollToLower"
+  >
+    <view class="item-wrap">
+      <view
+        class="video-item"
+        wx:for="{{ videoInfoList }}"
+        wx:key="stamp"
+        bindtap="handleOpenVideo"
+        data-vid="{{ item.data.vid }}"
+      >
+        <view class="cover">
+          <image mode="widthFix" src="{{ item.data.coverUrl }}"></image>
+          <view class="iconfont icon-bofang"></view>
+        </view>
+        <view class="title">{{ item.data.title || item.data.name }}
+        </view>
+        <view class="author">
+          <view class="ar-info">
+            <image class="ar-avatar" src="{{ item.data.creator.avatarUrl || item.data.artists[0].img1v1Url }}"></image>
+            <view class="ar-name">{{ item.data.creator.nickname || item.data.artists[0].name }}</view>
+          </view>
+          <view class="thumbup">
+            <text class="iconfont icon-dianzan"></text>
+            <text class="thumb-count">{{ item.data.thumbup }}</text>
+          </view>
+        </view>
+      </view>
+    </view>
+  </scroll-view>
+</view>

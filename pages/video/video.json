@@ -1,0 +1,8 @@
+{
+  "usingComponents": {
+    "VideoList": "./VideoList/VideoList",
+    "mp-video-swiper": "../../../components/video-swiper/index"
+  },
+  "navigationBarBackgroundColor": "#e60026",
+  "navigationBarTitleText": "KuMoMusic"
+}

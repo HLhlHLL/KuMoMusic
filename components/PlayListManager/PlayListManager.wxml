@@ -1,0 +1,15 @@
+<view class="play-list-manager">
+    <view class="header">
+      <view class="title">{{ title }}({{ list.length }}个)</view>
+      <view class="add-more">
+        <text wx:if="{{ plus }}" class="iconfont icon-plus"></text>
+        <text class="iconfont icon-more"></text>
+      </view>
+    </view>
+    <PlayList
+      wx:for="{{ list }}"
+      wx:key="id"
+      icon="{{ 'icon-more' }}"
+      listItem="{{ item }}"
+    ></PlayList>
+  </view>

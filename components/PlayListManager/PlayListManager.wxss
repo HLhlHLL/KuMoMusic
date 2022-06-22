@@ -1,0 +1,21 @@
+.play-list-manager {
+  padding: 30rpx 0;
+  border-radius: 20rpx;
+  background-color: #fff;
+  overflow: hidden;
+}
+
+.play-list-manager .header {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 30rpx;
+}
+
+.play-list-manager .header .title {
+  font-size: 24rpx;
+  color: #999;
+}
+
+.play-list-manager .header .add-more .iconfont {
+  padding: 0 10rpx;
+}

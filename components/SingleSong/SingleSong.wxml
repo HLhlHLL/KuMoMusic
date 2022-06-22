@@ -1,0 +1,46 @@
+<view class="m-item">
+  <view
+    class="cover"
+    bindtap="handlePlayMusic"
+  >
+    <image src="{{ musicInfo.al.picUrl }}"></image>
+  </view>
+  <view
+    class="name-author"
+    bindtap="handlePlayMusic"
+  >
+    <!-- 歌曲信息 -->
+    <view class="name">
+      <text class="name-origin">{{ musicInfo.name }}</text>
+      <text
+        class="name-translation"
+        wx:if="{{ musicInfo.al.tns[0] }}"
+      >({{ musicInfo.al.tns[0] }})</text>
+    </view>
+    <!-- 作者信息 -->
+    <view class="author">
+      <view class="ar-name">{{ artists }}</view>
+      -
+      <view class="reference">{{ musicInfo.al.name }}</view>
+    </view>
+  </view>
+  <!-- 操作选项 -->
+  <view class="item-options">
+    <!-- 播放 MV -->
+    <view
+      class="play-mv"
+      wx:if="{{ showMV }}"
+      bindtap="handlePlayMV"
+    >
+      <view class="iconfont icon-Play"></view>
+    </view>
+    <!-- 更多信息 -->
+    <view
+      class="more"
+      wx:if="{{ showMore }}"
+      bindtap="handleShowMore"
+    >
+      <view class="iconfont icon-more"></view>
+    </view>
+  </view>
+</view>

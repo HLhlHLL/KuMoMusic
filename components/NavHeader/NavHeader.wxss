@@ -1,0 +1,21 @@
+.nav-header {
+  display: flex;
+  padding: 30rpx 0;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav-header .normal {
+  font-size: 40rpx;
+  font-weight: 600;
+}
+
+.nav-header .medium {
+  font-size: 36rpx;
+  font-weight: 600;
+}
+
+.nav-header .mini {
+  font-size: 32rpx;
+  font-weight: normal;
+}

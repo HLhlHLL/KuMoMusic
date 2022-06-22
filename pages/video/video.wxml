@@ -1,0 +1,61 @@
+<view class="container">
+  <!-- 导航栏 -->
+  <scroll-view
+    class="scroll-nav"
+    scroll-x
+    enable-flex
+    scroll-with-animation
+    scroll-into-view="{{ 'scroll' + curNavId }}"
+  >
+    <view class="item-wrap">
+      <view
+        class="scroll-item {{ curNavId == item.id ? 'active' : '' }}"
+        wx:for="{{ navList }}"
+        wx:key="id"
+        bindtap="handleTapNav"
+        id="{{ 'scroll' + item.id }}"
+        data-id="{{ item.id }}"
+        data-index="{{ index }}"
+      >
+        {{ item.name }}
+      </view>
+    </view>
+  </scroll-view>
+
+  <!-- 视频简介列表 -->
+  <swiper
+    class="video-list"
+    current="{{ curNavIdx }}"
+    bindchange="handelSwiperItemChange"
+  >
+    <swiper-item
+      wx:for="{{ navList }}"
+      wx:key="index"
+    >
+      <VideoList
+        class="video-list"
+        index="{{ index }}"
+        videoListId="{{ item.id }}"
+        bindisReady="handleCompReady"
+        bindhandleOpenVideo="handleOpenVideo"
+      ></VideoList>
+    </swiper-item>
+  </swiper>
+
+</view>
+
+<!-- 短视频 -->
+<view
+  class="video-wrap"
+  wx:if="{{ showVideo }}"
+>
+  <view
+    class="close"
+    bindtap="handleCloseVideo"
+  >×</view>
+  <mp-video-swiper
+    video-list="{{ videoList }}"
+    bindchange="handleVideoChange"
+  ></mp-video-swiper>
+</view>
+

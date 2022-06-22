@@ -1,0 +1,7 @@
+{
+  "usingComponents": {
+    "SingleSong": "../../components/SingleSong/SingleSong"
+  },
+  "navigationBarBackgroundColor": "#e60026",
+  "navigationBarTitleText": "KuMoMusic"
+}

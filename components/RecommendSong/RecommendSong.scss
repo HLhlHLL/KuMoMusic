@@ -1,0 +1,101 @@
+.m-item {
+  display: flex;
+  align-items: center;
+  height: 100rpx;
+  margin: 10rpx 0;
+
+  .cover {
+    position: relative;
+    width: 90rpx;
+    height: 90rpx;
+
+    .iconfont {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      color: #eee;
+      font-size: 60rpx;
+      opacity: .6;
+    }
+
+    image {
+      width: 100%;
+      height: 100%;
+      border-radius: 20rpx;
+    }
+  }
+
+  .m-desc {
+    flex: 1;
+    height: 100rpx;
+    margin-left: 20rpx;
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid #eee;
+
+    .music-info {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+      width: 100%;
+
+      .name-author {
+        width: 100%;
+        display: flex;
+
+        .name {
+          max-width: 300rpx;
+          overflow: hidden;
+          text-overflow: ellipsis;
+          white-space: nowrap;
+          
+          .music-name-origin {
+            margin-right: 10rpx;;
+            font-size: 32rpx;
+          }
+        }
+
+        .authors {
+          max-width: 200rpx;
+          margin-left: 20rpx;
+          overflow: hidden;
+          text-overflow: ellipsis;
+          white-space: nowrap;
+          color: #999;
+          
+          .music-author {
+            padding-left: 10rpx;
+            font-size: 24rpx;
+            text-align: right;
+          }
+        }
+      }
+
+      .music-reference {
+        max-width: 440rpx;
+        font-size: 24rpx;
+        color: #999;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+      }
+    }
+
+    .options {
+      display: flex;
+      align-items: center;
+      margin-left: 10rpx;
+      color: #999;
+
+      .play-mv,
+      .more {
+        margin: 0 4rpx;
+        
+        .iconfont {
+          font-size: 30rpx;
+        }
+      }
+    }
+  }
+}

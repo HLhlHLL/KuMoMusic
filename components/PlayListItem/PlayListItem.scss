@@ -1,0 +1,34 @@
+.playlist-item {
+  position: relative;
+  margin: 0 10rpx;
+  border-radius: 20rpx;
+
+  .top {
+    position: absolute;
+    top: 6rpx;
+    right: 10rpx;
+    padding: 5rpx 10rpx;
+    border-radius: 20rpx;
+    font-size: 24rpx;
+    background-color: rgba($color: #000, $alpha: .1);
+    color: white;
+
+    .iconfont {
+      font-size: 24rpx;
+    }
+  }
+
+  image {
+    width: 200rpx;
+    height: 200rpx;
+    border-radius: 20rpx;
+  }
+
+  .title {
+    width: 200rpx;
+    font-size: 24rpx;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+}

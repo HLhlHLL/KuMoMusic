@@ -1,0 +1,212 @@
+.container {
+  // 搜索框
+  .search-wrap {
+    display: flex;
+    align-items: center;
+    padding: 20rpx 30rpx 0;
+    background-color: #fff;
+
+    .search-input-wrap {
+      flex: 1;
+      display: flex;
+
+      .icon-wangyiyunyinle {
+        line-height: 60rpx;
+        font-size: 40rpx;
+        color: #e60026;
+      }
+
+      .input-wrap {
+        flex: 1;
+        position: relative;
+        margin-left: 20rpx;
+
+        .search-input {
+          padding: 8rpx 16rpx;
+          background-color: #eee;
+          border-radius: 25rpx;
+          color: #999;
+          text-align: center;
+        }
+      }
+    }
+  }
+
+  // 轮播图
+  .banner {
+    padding: 30rpx;
+    background-color: #fff;
+
+    .swiper-wrap {
+      border-radius: 20rpx;
+      overflow: hidden;
+
+      image {
+        width: 100%;
+        height: 100%;
+      }
+    }
+  }
+
+  // 导航栏列表
+  .nav {
+    display: flex;
+    padding: 0 30rpx;
+    background-color: #fff;
+
+    .nav-item {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin: 20rpx;
+      text-align: center;
+      
+      .list-icon {
+        width: 90rpx;
+        height: 90rpx;
+        margin-bottom: 10rpx;
+        line-height: 90rpx;
+        font-size: 50rpx;
+        border-radius: 50%;
+        color: #e60026;
+        background-color: rgba($color: #e60026, $alpha: .1);
+      }
+
+      .list-text {
+        font-size: 28rpx;
+        color: #666;
+      }
+    }
+  }
+
+  // 歌单推荐
+  .recommend-playlist {
+    padding: 0 30rpx;
+    border-top: 1px solid #eee;
+    background-color: #fff;
+    border-bottom-left-radius: 20rpx;
+    border-bottom-right-radius: 20rpx;
+
+    .option-btn {
+      height: 40rpx;
+      line-height: 40rpx;
+      border: 1px solid #999;
+      border-radius: 20rpx;
+      padding: 0 6rpx 0 16rpx;
+      
+      .btn-text {
+        font-size: 28rpx;
+        vertical-align: top;
+      }
+
+      .iconfont {
+        font-size: 28rpx;
+        vertical-align: top;
+      }
+    }
+
+    // 歌单列表
+    .m-list {
+      scroll-view {
+        display: flex;
+        height: 300rpx;
+      }
+    }
+  }
+
+  // 排行榜
+  .toplist-wrap {
+    margin-top: 20rpx;
+    padding: 0 30rpx 30rpx;
+    background-color: #fff;
+    border-radius: 20rpx;
+
+    .option-btn {
+      height: 40rpx;
+      line-height: 40rpx;
+      border: 1px solid #999;
+      border-radius: 20rpx;
+      padding: 0 6rpx 0 16rpx;
+      
+      .btn-text {
+        font-size: 28rpx;
+      }
+
+      .iconfont {
+        font-size: 28rpx;
+      }
+    }
+    
+    swiper {
+      height: 500rpx;
+    }
+
+    swiper-item {
+      padding: 10rpx;
+      box-sizing: border-box;
+    }
+
+    .toplist {
+      padding: 0 20rpx 20rpx;
+      border: 1px solid #eee;
+      border-radius: 20rpx;
+      box-shadow: 0 0 10rpx rgba($color: #000000, $alpha: .2);
+
+      .header-desc {
+        font-size: 26rpx;
+        color: #999;
+      }
+
+      .m-item {
+        display: flex;
+        margin-bottom: 20rpx;
+
+        .cover {
+          width: 90rpx;
+          height: 90rpx;
+
+          image {
+            width: 100%;
+            height: 100%;
+            border-radius: 20rpx;
+          }
+        }
+
+        .m-desc {
+          display: flex;
+          align-items: center;
+          width: 500rpx;
+
+          .order {
+            width: 50rpx;
+            text-align: center;
+          }
+
+          .music-info {
+            .music-name {
+              max-width: 400rpx;
+              overflow: hidden;
+              text-overflow: ellipsis;
+              white-space: nowrap;
+            }
+
+            .music-author {
+              max-width: 400rpx;
+              font-size: 24rpx;
+              color: #999;
+              overflow: hidden;
+              text-overflow: ellipsis;
+              white-space: nowrap;
+            }
+          }
+
+          .tag {
+            width: 50rpx;
+            text-align: center;
+            font-size: 24rpx;
+          }
+        }
+      }
+    }
+  }
+}

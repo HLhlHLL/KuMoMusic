@@ -1,0 +1,8 @@
+{
+  "usingComponents": {
+    "PlayList": "/components/PlayList/PlayList",
+    "PlayListManager": "/components/PlayListManager/PlayListManager"
+  },
+  "navigationBarBackgroundColor": "#e60026",
+  "navigationBarTitleText": "KuMoMusic"
+}

@@ -1,0 +1,29 @@
+.recommend-single {
+  height: 500rpx;
+  background-color: #fff;
+  margin-top: 20rpx;
+  padding: 0 30rpx;
+  border-radius: 20rpx;
+}
+
+.recommend-single .option-btn {
+  height: 40rpx;
+  line-height: 40rpx;
+  border: 1px solid #999;
+  border-radius: 20rpx;
+  padding: 0 16rpx 0 6rpx;
+}
+
+.recommend-single .option-btn .btn-text {
+  vertical-align: top;
+  font-size: 28rpx;
+}
+
+.recommend-single .option-btn .iconfont {
+  vertical-align: top;
+  font-size: 28rpx;
+}
+
+.recommend-single .m-list {
+  height: 360rpx;
+}

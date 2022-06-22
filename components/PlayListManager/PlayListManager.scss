@@ -1,0 +1,24 @@
+.play-list-manager {
+  padding: 30rpx 0;
+  // margin-bottom: 30rpx;
+  border-radius: 20rpx;
+  background-color: #fff;
+  overflow: hidden;
+  
+  .header {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 30rpx;
+
+    .title {
+      font-size: 24rpx;
+      color: #999;
+    }
+
+    .add-more {
+      .iconfont {
+        padding: 0 10rpx;
+      }
+    }
+  }
+}

@@ -1,0 +1,6 @@
+<view class="nav-header">
+  <h1 class="{{ size }}">{{ title }}</h1>
+  <view class="btn-wrap">
+    <slot></slot>
+  </view>
+</view>

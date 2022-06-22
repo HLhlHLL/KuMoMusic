@@ -1,0 +1,31 @@
+<view class="recommend-single">
+    <NavHeader title="单曲推荐">
+      <!-- <view class="option-btn">
+        <text class="iconfont icon-bofanganniu"></text>
+        <text class="btn-text">播放</text>
+      </view> -->
+    </NavHeader>
+
+    <!-- 单曲列表 -->
+    <swiper class="m-list">
+      <swiper-item
+        wx:for="{{ list }}"
+        wx:for-item="SingleList"
+        wx:for-index="index"
+        wx:key="index"
+      >
+        <block
+          wx:for="{{ SingleList }}"
+          wx:for-index="_index"
+          wx:key="id"
+        >
+          <RecommendSong
+            musicInfo="{{ item }}"
+            showMV="{{ item.song.mvid }}"
+            index="{{ _index }}"
+            bindhandleUpdateSongList="handleUpdateSongList"
+          ></RecommendSong>
+        </block>
+      </swiper-item>
+    </swiper>
+  </view>

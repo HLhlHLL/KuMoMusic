@@ -1,0 +1,94 @@
+<view class="search-container">
+  <!-- 搜索框 -->
+  <view class="search-wrap">
+    <view class="search-input-wrap">
+      <view class="iconfont icon-wangyiyunyinle"></view>
+      <view class="input-wrap">
+        <input
+          class="search-input"
+          type="text"
+          focus
+          value="{{ clearValue }}"
+          placeholder="{{ defaultKeyword }}"
+          bindinput="handleInputKeyword"
+        />
+        <view
+          class="clear"
+          wx:if="{{ keywords }}"
+          catchtap="hanleClearKeyword"
+        >×</view>
+      </view>
+    </view>
+    <button
+      class="search-btn"
+      bindtap="handleSearch"
+    >搜索</button>
+  </view>
+  <block
+    wx:if="{{ !keywords }}"
+  >
+    <!-- 搜索历史 -->
+    <view
+      class="search-history"
+      wx:if="{{ historyKeywords.length !== 0 }}"
+    >
+      <view class="title">历史</view>
+      <scroll-view
+        class="history-scroll"
+        scroll-x
+        enable-flex
+      >
+        <view
+          class="history"
+          wx:for="{{ historyKeywords }}"
+          wx:key="*this"
+        >{{ item }}</view>
+      </scroll-view>
+      <view
+        class="delete-history"
+        bindtap="handleClearHistory"
+      >删除</view>
+    </view>
+    <!-- 热搜列表 -->
+    <view class="hot-list">
+      <view class="title">热搜榜</view>
+      <view class="list-wrap">
+        <view
+          class="hot-list-item"
+          wx:for="{{ hots }}"
+          wx:key="index"
+          bindtap="handleTapHotList"
+          data-hotkeywords="{{ item.searchWord }}"
+        >
+          <view
+            class="order {{ index < 3 ? 'order-top-three' : '' }}"
+          >{{ index + 1 }}</view>
+          <view
+            class="keyword {{ index < 3 ? 'keyword-top-three' : '' }}"
+          >{{ item.searchWord }}</view>
+          <image
+            class="hot-tag"
+            mode="heightFix"
+            wx:if="{{ item.iconUrl }}"
+            src="{{ item.iconUrl }}"
+          ></image>
+        </view>
+      </view>
+    </view>
+  </block>
+  <block
+    wx:else
+  >
+    <!-- 搜索结果 -->
+    <view class="search-result">
+      <view
+        class="matches"
+        wx:for="{{ allMatch }}"
+        wx:key="keyword"
+      >
+        <view class="iconfont icon-wangyiyunyinle"></view>
+        <view class="content">{{ item.keyword }}</view>
+      </view>
+    </view>
+  </block>
+</view>

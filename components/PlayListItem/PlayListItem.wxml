@@ -1,0 +1,11 @@
+<view
+  class="playlist-item"
+  bindtap="handleOpenPlayList"
+>
+  <view class="top">
+    <text class="iconfont icon-bofanganniu"></text>
+    <text class="play-count">{{ listItem.playCount }}</text>
+  </view>
+  <image src="{{ listItem.picUrl || listItem.coverImgUrl }}"></image>
+  <view class="title">{{ listItem.name }}</view>
+</view>

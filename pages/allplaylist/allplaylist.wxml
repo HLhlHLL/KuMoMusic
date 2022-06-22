@@ -1,0 +1,28 @@
+<view class="allplaylist-container">
+  <!-- 导航栏 -->
+  <scroll-view
+    class="nav-scroll"
+    scroll-x
+    enable-flex
+    scroll-into-view="{{ curNavId }}"
+    scroll-with-animation
+  >
+    <view
+      class="nav-tag {{ curNavIdx === index ? 'active' : '' }}"
+      wx:for="{{ allTags }}"
+      wx:key="id"
+      data-index="{{ index }}"
+      data-tag="{{ item.name }}"
+      id="{{ 'scroll' + item.id }}"
+      bindtap="handleTapNav"
+    >{{ item.name }}</view>
+  </scroll-view>
+  <!-- 歌单列表 -->
+  <view class="all-playlist">
+    <PlayListItem
+      wx:for="{{ allPlayList }}"
+      wx:key="id"
+      playListItem="{{ item }}"
+    ></PlayListItem>
+  </view>
+</view>

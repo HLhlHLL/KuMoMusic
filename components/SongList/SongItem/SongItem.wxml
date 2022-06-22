@@ -1,0 +1,14 @@
+<view
+  class="song-item"
+  bindtap="handleChangeSong"
+>
+  <view class="m-desc">
+    <view class="music-name {{ index === currentIndex ? 'active' : '' }}">{{ song.name }}</view>
+    <view class="author-name">- {{ artists }}</view>
+  </view>
+  <!-- <view
+    class="delete-song"
+    catchtap="handleDeleteSong"
+    data-id="{{ song.id }}"
+  >×</view> -->
+</view>

@@ -1,0 +1,46 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/search/search",
+    "pages/allplaylist/allplaylist",
+    "pages/video/video",
+    "pages/playlist/playlist",
+    "pages/login/login",
+    "pages/songdetail/songdetail",
+    "pages/daily/daily",
+    "pages/userinfo/userinfo"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarTextStyle": "white"
+  },
+  "style": "v2",
+  "sitemapLocation": "sitemap.json",
+  "tabBar": {
+    "color": "#333",
+    "selectedColor": "#d81e06",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "发现",
+        "iconPath": "static/images/tabBar/faxian-default.png",
+        "selectedIconPath": "static/images/tabBar/faxian-active.png"
+      },
+      {
+        "pagePath": "pages/video/video",
+        "text": "云村",
+        "iconPath": "static/images/tabBar/shipin-default.png",
+        "selectedIconPath": "static/images/tabBar/shipin-active.png"
+      },
+      {
+        "pagePath": "pages/userinfo/userinfo",
+        "text": "我的",
+        "iconPath": "static/images/tabBar/iconset0163-default.png",
+        "selectedIconPath": "static/images/tabBar/iconset0163-active.png"
+      }
+    ]
+  },
+  "requiredBackgroundModes": [
+    "audio"
+  ]
+}

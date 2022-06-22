@@ -1,0 +1,183 @@
+.container {
+  padding: 0 30rpx;
+}
+
+.container .userinfo-wrap {
+  padding-top: 100rpx;
+  margin-bottom: 30rpx;
+}
+
+.container .userinfo-wrap .inner {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  padding-top: 80rpx;
+  padding-bottom: 30rpx;
+  background-color: #fff;
+  border-radius: 20rpx;
+}
+
+.container .userinfo-wrap .inner .avatar {
+  position: absolute;
+  top: -60rpx;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 120rpx;
+  height: 120rpx;
+}
+
+.container .userinfo-wrap .inner .avatar image {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+}
+
+.container .userinfo-wrap .inner .avatar .iconfont {
+  width: 100%;
+  height: 100%;
+  line-height: 120rpx;
+  font-size: 80rpx;
+  text-align: center;
+  color: #f9d9dc;
+  border-radius: 50%;
+  background-color: #f7f1f1;
+}
+
+.container .userinfo-wrap .inner .loggedin {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.container .userinfo-wrap .inner .loggedin .user-vip {
+  display: flex;
+  height: 50rpx;
+  line-height: 50rpx;
+  margin-bottom: 20rpx;
+}
+
+.container .userinfo-wrap .inner .loggedin .user-vip .username {
+  font-size: 38rpx;
+  font-weight: 600;
+  margin-right: 20rpx;
+}
+
+.container .userinfo-wrap .inner .loggedin .user-vip .vip {
+  background-color: #eee;
+  padding: 0 10rpx;
+  border-radius: 25rpx;
+  font-size: 24rpx;
+}
+
+.container .userinfo-wrap .inner .loggedin .user-vip .vip .iconfont {
+  font-size: 24rpx;
+}
+
+.container .userinfo-wrap .inner .loggedin .follow-fans-level {
+  display: flex;
+  justify-content: space-around;
+  font-size: 28rpx;
+  color: #999;
+}
+
+.container .userinfo-wrap .inner .loggedin .follow-fans-level .follow {
+  width: 100rpx;
+  text-align: center;
+  border-right: 1px solid #ddd;
+}
+
+.container .userinfo-wrap .inner .loggedin .follow-fans-level .fans {
+  width: 100rpx;
+  text-align: center;
+  border-right: 1px solid #ddd;
+}
+
+.container .userinfo-wrap .inner .loggedin .follow-fans-level .level {
+  width: 100rpx;
+  text-align: center;
+}
+
+.container .userinfo-wrap .inner .not-loggedin .denglu {
+  font-size: 36rpx;
+  font-weight: 600;
+}
+
+.container .nav-list {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  place-items: center;
+  padding: 20rpx 30rpx;
+  margin-bottom: 30rpx;
+  background-color: #fff;
+  border-radius: 20rpx;
+}
+
+.container .nav-list .option {
+  width: 100rpx;
+  margin: 10rpx 0;
+  text-align: center;
+  font-size: 24rpx;
+}
+
+.container .favorite {
+  margin-bottom: 10rpx;
+  padding: 20rpx 0;
+  border-radius: 20rpx;
+  background-color: #fff;
+  overflow: hidden;
+}
+
+.container .top-wrap {
+  position: relative;
+  padding-top: 90rpx;
+}
+
+.container .top-wrap .list-manage {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  height: 70rpx;
+  margin-bottom: 30rpx;
+  text-align: center;
+}
+
+.container .top-wrap .list-manage.fixed {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 0 30rpx;
+  background-color: #fff;
+  z-index: 99;
+  box-sizing: border-box;
+}
+
+.container .top-wrap .list-manage .create,
+.container .top-wrap .list-manage .collect {
+  flex: 1;
+  border: 5px solid transparent;
+}
+
+.container .top-wrap .list-manage .active {
+  border: 5px solid;
+  border-image: linear-gradient(to right, #e60026, #e600265d) 0 0 10;
+}
+
+.container .logout {
+  margin: 20rpx 0;
+}
+
+.container .logout .logout-btn {
+  height: 80rpx;
+  line-height: 80rpx;
+  margin: 0 auto;
+  padding: 0;
+  background-color: #e60026;
+  color: #fff;
+  font-weight: normal;
+}

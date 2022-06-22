@@ -1,0 +1,60 @@
+<view class="m-item">
+  <view
+    class="cover"
+    bindtap="handlePlayMusic"
+  >
+    <view class="iconfont icon-bofanganniu"></view>
+    <image src="{{ musicInfo.picUrl }}"></image>
+  </view>
+  <!-- 歌曲信息 -->
+  <view class="m-desc">
+    <view
+      class="music-info"
+      bindtap="handlePlayMusic"
+    >
+      <view class="name-author">
+        <view class="name">
+          <!-- 歌名 -->
+          <text class="music-name-origin">{{ musicInfo.name }}</text>
+          <!-- 歌名-翻译 -->
+          <text
+            class="music-name-translation"
+          ></text>
+        </view>
+        <!-- 歌手 -->
+        <view class="authors">
+          -<text class="music-author">{{ artists }}</text>
+        </view>
+      </view>
+      <!-- 歌曲出处 -->
+      <view
+        class="music-reference"
+        wx:if="{{ musicInfo.song.alias.length > 0 }}"
+      >
+        <text>{{ musicInfo.song.alias[0] }}</text>
+      </view>
+    </view>
+    <!-- 操作选项 -->
+    <view
+      class="options"
+      wx:if="{{ showMV || showMore }}"
+    >
+      <!-- 播放 MV 按钮 -->
+      <view
+        class="play-mv"
+        wx:if="{{ showMV }}"
+        bindtap="handlePlayMV"
+      >
+        <view class="iconfont icon-Play"></view>
+      </view>
+      <!-- 更多选项按钮 -->
+      <view
+        class="more"
+        wx:if="{{ showMore }}"
+        bindtap="handleShowMore"
+      >
+        <view class="iconfont icon-more"></view>
+      </view>
+    </view>
+  </view>
+</view>

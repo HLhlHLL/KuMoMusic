@@ -1,0 +1,95 @@
+.container {
+  height: 100%;
+}
+
+.container .scroll-video {
+  height: 100%;
+  box-sizing: border-box;
+  padding: 10rpx 10rpx 0;
+}
+
+.container .scroll-video .item-wrap {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-column-gap: 10rpx;
+}
+
+.container .scroll-video .item-wrap .video-item {
+  padding-bottom: 20rpx;
+  margin-bottom: 20rpx;
+  background-color: #fff;
+  overflow: hidden;
+  border-radius: 20rpx;
+  background-color: #fff;
+  box-shadow: 0 0 10rpx rgba(0, 0, 0, 0.3);
+}
+
+.container .scroll-video .item-wrap .video-item .cover {
+  position: relative;
+  width: 100%;
+  margin-bottom: 10rpx;
+}
+
+.container .scroll-video .item-wrap .video-item .cover image {
+  width: 100%;
+  object-fit: cover;
+}
+
+.container .scroll-video .item-wrap .video-item .cover .iconfont {
+  position: absolute;
+  top: 10rpx;
+  right: 20rpx;
+  color: #eee;
+  font-size: 60rpx;
+}
+
+.container .scroll-video .item-wrap .video-item .title {
+  font-size: 28rpx;
+  padding: 0 20rpx;
+  word-wrap: break-word;
+  word-break: break-all;
+}
+
+.container .scroll-video .item-wrap .video-item .author {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 10rpx;
+}
+
+.container .scroll-video .item-wrap .video-item .author .ar-info {
+  display: flex;
+  margin-top: 10rpx;
+}
+
+.container .scroll-video .item-wrap .video-item .author .ar-info .ar-avatar {
+  width: 40rpx;
+  height: 40rpx;
+  border-radius: 50%;
+}
+
+.container .scroll-video .item-wrap .video-item .author .ar-info .ar-name {
+  max-width: 150rpx;
+  line-height: 40rpx;
+  margin-left: 8rpx;
+  font-size: 24rpx;
+  color: #868686;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.container .scroll-video .item-wrap .video-item .thumbup {
+  height: 40rpx;
+  line-height: 40rpx;
+  color: #999;
+}
+
+.container .scroll-video .item-wrap .video-item .thumbup .iconfont {
+  font-size: 24rpx;
+}
+
+.container .scroll-video .item-wrap .video-item .thumbup .thumb-count {
+  padding-left: 4rpx;
+  font-size: 24rpx;
+}

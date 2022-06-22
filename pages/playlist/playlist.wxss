@@ -1,0 +1,140 @@
+.playlist-container {
+  height: 100%;
+  background-color: #fff;
+}
+
+.playlist-container .bg-wrap {
+  position: relative;
+  top: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  height: 400rpx;
+  padding: 0 30rpx;
+  z-index: 99;
+}
+
+.playlist-container .bg-wrap .bg-img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.3);
+  border-radius: 0 0 180% 180% / 0 0 20% 20%;
+  z-index: -1;
+  overflow: hidden;
+}
+
+.playlist-container .bg-wrap .bg-img image {
+  width: 100%;
+  filter: blur(50rpx);
+}
+
+.playlist-container .bg-wrap .cover {
+  width: 200rpx;
+  height: 200rpx;
+}
+
+.playlist-container .bg-wrap .cover image {
+  width: 100%;
+  border-radius: 20rpx;
+}
+
+.playlist-container .bg-wrap .playlist-desc {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 200rpx;
+  margin-left: 40rpx;
+}
+
+.playlist-container .bg-wrap .playlist-desc .playlist-name {
+  max-width: 400rpx;
+  color: #fff;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.playlist-container .bg-wrap .playlist-desc .playlist-ar .ar-info {
+  display: flex;
+  margin: 16rpx 0;
+}
+
+.playlist-container .bg-wrap .playlist-desc .playlist-ar .ar-info .ar-avatar {
+  width: 50rpx;
+  height: 50rpx;
+  margin-right: 20rpx;
+}
+
+.playlist-container .bg-wrap .playlist-desc .playlist-ar .ar-info .ar-avatar image {
+  width: 100%;
+  border-radius: 50%;
+}
+
+.playlist-container .bg-wrap .playlist-desc .playlist-ar .ar-info .ar-name {
+  line-height: 50rpx;
+  font-size: 28rpx;
+  color: #b3b3b3;
+}
+
+.playlist-container .bg-wrap .playlist-desc .playlist-ar .description {
+  max-width: 400rpx;
+  font-size: 24rpx;
+  color: #b3b3b3;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.playlist-container .bg-wrap .playlist-desc .playlist-ar .desc-none {
+  font-size: 24rpx;
+  color: #999;
+}
+
+.playlist-container .bg-wrap .playlist-desc .playlist-ar .desc-none .iconfont {
+  font-size: 24rpx;
+}
+
+.playlist-container .music-list {
+  position: absolute;
+  top: 200rpx;
+  left: 0;
+  width: 100%;
+  padding: 100rpx 30rpx 0;
+  background-color: #fff;
+  box-sizing: border-box;
+}
+
+.playlist-container .music-list .options {
+  display: flex;
+  position: absolute;
+  top: 20rpx;
+  left: 0;
+  width: 100%;
+  height: 100rpx;
+  padding-left: 30rpx;
+  align-items: center;
+  background-color: #fff;
+}
+
+.playlist-container .music-list .options.fixed {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding-left: 30rpx;
+  background-color: #fff;
+}
+
+.playlist-container .music-list .options .option-title,
+.playlist-container .music-list .options .iconfont {
+  line-height: 100rpx;
+}
+
+.playlist-container .music-list .options .icon-bofang {
+  margin: 0 10rpx;
+  font-size: 40rpx;
+  color: #e60026;
+}

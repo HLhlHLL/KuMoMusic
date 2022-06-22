@@ -1,0 +1,56 @@
+.container {
+  height: 100%;
+}
+
+.container .scroll-nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 80rpx;
+  padding: 0 20rpx;
+  box-sizing: border-box;
+  background-color: #fff;
+  z-index: 99;
+}
+
+.container .scroll-nav .item-wrap {
+  display: flex;
+  height: 60rpx;
+  white-space: nowrap;
+}
+
+.container .scroll-nav .item-wrap .scroll-item {
+  height: 60rpx;
+  line-height: 60rpx;
+  margin-right: 90rpx;
+  font-size: 28rpx;
+}
+
+.container .scroll-nav .item-wrap .active {
+  border-bottom: 2px solid #e60026;
+}
+
+.container .video-list {
+  padding-top: 80rpx;
+  height: 100%;
+  box-sizing: border-box;
+}
+
+.video-wrap {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 999;
+  background-color: #eee;
+}
+
+.video-wrap .close {
+  position: absolute;
+  top: 0;
+  right: 40rpx;
+  font-size: 80rpx;
+  color: #eee;
+  z-index: 1000;
+}

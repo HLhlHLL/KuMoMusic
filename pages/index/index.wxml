@@ -1,0 +1,136 @@
+<!--index.wxml-->
+<view class="container">
+  <!-- 搜索框 -->
+  <view class="search-wrap">
+    <view class="search-input-wrap">
+      <view class="iconfont icon-wangyiyunyinle"></view>
+      <view
+        class="input-wrap"
+        bindtap="handleOpenSearch"
+      >
+        <view class="search-input">
+          <text class="iconfont icon-more"></text>
+          <text class="default-keyword">{{ defaultKeyword }}</text>
+        </view>
+      </view>
+    </view>
+  </view>
+  <!-- 轮播图区域 -->
+  <view class="banner">
+    <view class="swiper-wrap">
+      <swiper
+        autoplay
+        circular
+        indicator-dots
+        indicator-color="#eff"
+        indicator-active-color="#e60026"
+      >
+        <swiper-item
+          wx:for="{{ bannerList }}"
+          wx:key="imageUrl"
+        >
+          <image src="{{ item.imageUrl }}"></image>
+        </swiper-item>
+      </swiper>
+    </view>
+  </view>
+
+  <!-- 导航栏 -->
+  <view class="nav">
+    <view
+      class="nav-item"
+      wx:for="{{ navList }}"
+      wx:key="icon"
+      data-page="{{ item.page }}"
+      bindtap="handleOpenNav"
+    >
+      <view class="list-icon iconfont {{ item.icon }}"></view>
+      <view class="list-text">{{ item.title }}</view>
+    </view>
+  </view>
+
+  <!-- 歌单推荐 -->
+  <view class="recommend-playlist">
+    <NavHeader title="歌单推荐">
+      <view
+        class="option-btn"
+        bindtap="handleOpenAllPlayList"
+      >
+        <text class="btn-text">更多</text>
+        <text class="iconfont icon-right"></text>
+      </view>
+    </NavHeader>
+
+    <!-- 歌单列表 -->
+    <view class="m-list">
+      <scroll-view
+        scroll-x
+        enable-flex
+      >
+        <PlayListItem
+          wx:for="{{ recommendPlaylist }}"
+          wx:key="id"
+          playListItem="{{ item }}"
+        ></PlayListItem>
+      </scroll-view>
+    </view>
+  </view>
+
+  <!-- 单曲推荐 -->
+  <RecommendSingle
+    recommendSingleList="{{ recommendSingleList }}"
+  ></RecommendSingle>
+
+  <!-- 排行榜 -->
+  <view class="toplist-wrap">
+    <NavHeader title="排行榜">
+      <!-- <view class="option-btn">
+        <text class="btn-text">更多</text>
+        <text class="iconfont icon-right"></text>
+      </view> -->
+    </NavHeader>
+
+    <swiper
+      next-margin="60rpx"
+    >
+      <swiper-item
+        wx:for="{{ topList }}"
+        wx:for-item="listItem"
+        wx:key="id"
+      >
+        <view class="toplist">
+          <NavHeader
+            title="{{ listItem.name }}"
+            size="medium"
+            bindtap="handleOpenTopList"
+            data-id="{{ listItem.id }}"
+          >
+            <!-- <text class="header-desc">最具特色</text> -->
+          </NavHeader>
+
+          <view
+            class="m-item"
+            wx:for="{{ listItem.tracks }}"
+            wx:for-item="track"
+            wx:for-index="order"
+            wx:key="first"
+            bindtap="handlePlayMusic"
+            data-id="{{ track.id }}"
+          >
+            <view class="cover">
+              <image src="{{ track.al.picUrl }}"></image>
+            </view>
+            <view class="m-desc">
+              <view class="order">{{ order + 1 }}</view>
+              <view class="music-info">
+                <view class="music-name">{{ track.name }}</view>
+                <view class="music-author">{{ track.ar[0].name }}</view>
+              </view>
+              <!-- <view class="tag">hot</view> -->
+            </view>
+          </view>
+        </view>
+      </swiper-item>
+    </swiper>
+  </view>
+</view>

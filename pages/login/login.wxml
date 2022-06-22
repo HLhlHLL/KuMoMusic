@@ -1,0 +1,32 @@
+<view class="container">
+  <view class="welcome">
+    <view class="iconfont icon-wangyiyunyinle"></view>
+  </view>
+
+  <!-- 登陆验证 -->
+  <form bindsubmit="handleSubmit">
+    <view class="phone">
+      <label for="phone">手机号</label>
+      <input
+        id="phone"
+        type="text"
+        placeholder="请输入手机号"
+        placeholder-style="color: #bbb; font-size: 28rpx;"
+        bindinput="handleInput"
+      />
+    </view>
+
+    <view class="password">
+      <label for="password">密码</label>
+      <input
+        id="password"
+        type="password"
+        placeholder="请输入密码"
+        placeholder-style="color: #bbb; font-size: 28rpx;"
+        bindinput="handleInput"
+      />
+    </view>
+
+    <button class="submitBtn" form-type="submit">登录</button>
+  </form>
+</view>

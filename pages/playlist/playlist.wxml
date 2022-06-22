@@ -1,0 +1,52 @@
+<view class="playlist-container">
+  <view class="bg-wrap">
+    <view class="bg-img">
+      <image mode="scaleToFill" src="{{ playListDetail.coverImgUrl }}"></image>
+    </view>
+    <view class="cover">
+      <image mode="widthFix" src="{{ playListDetail.coverImgUrl }}"></image>
+    </view>
+    <view class="playlist-desc">
+      <view class="playlist-name">{{ playListDetail.name }}</view>
+      <view class="playlist-ar">
+        <view class="ar-info">
+          <view class="ar-avatar">
+            <image mode="widthFix" src="{{ playListDetail.creator.avatarUrl }}"></image>
+          </view>
+          <view class="ar-name">{{ playListDetail.creator.nickname }}</view>
+        </view>
+        <view
+          class="description"
+          wx:if="{{ playListDetail.description }}"
+        >{{ playListDetail.description }}</view>
+        <view
+          class="desc-none"
+          wx:else
+        >
+          <text>编辑信息</text>
+          <text class="iconfont icon-right"></text>
+        </view>
+      </view>
+    </view>
+  </view>
+  <view class="music-list">
+    <view class="music-list">
+    <view class="options {{ fixed }}">
+      <view class="iconfont icon-bofang"></view>
+      <view
+        class="option-title"
+        bindtap="handlePlayAll"
+      >播放全部</view>
+    </view>
+    <SingleSong
+      wx:for="{{ songList }}"
+      wx:key="id"
+      showMore
+      showMv
+      musicInfo="{{ item }}"
+      index="{{ index }}"
+      bindhandleUpdateSongList="handleUpdateSongList"
+    ></SingleSong>
+  </view>
+  </view>
+</view>
